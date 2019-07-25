@@ -1,6 +1,11 @@
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/variables';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/civicrm/variables';
 
+h1.page-title {
+  background: $crm-white;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+}
+
 h2 {
   font-weight: 600 !important;
 }
@@ -57,6 +62,10 @@ h2 {
     }
   }
 }
+
+#page {
+  background: $crm-background !important;
+}
   
 #printer-friendly {
   position: absolute !important;
@@ -72,5 +81,3 @@ h2 {
 #toolbar {
   box-shadow: none !important;
 }
-
-
