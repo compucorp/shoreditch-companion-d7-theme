@@ -1,24 +1,27 @@
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/variables';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/civicrm/variables';
+
 h2 {
   font-weight: 600 !important;
 }
 
 #branding {
-  background: #222831 !important;
-  color: #fff !important;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: $crm-page-topbar-bg !important;
+  color: $crm-white !important;
+  font-family: $font-family-base;
   line-height: 20px;
   overflow: visible !important;
-  padding: 20px 0 0;
+  padding: $crm-standard-gap 0 0;
 
   h1.page-title {
-    background: #fff;
+    background: $crm-white;
     box-sizing: border-box;
-    color: #464354;
+    color: $gray-darker;
     display: block;
     font-weight: 600 !important;
     line-height: 50px !important;
-    margin: -20px 0 20px;
-    padding: 0 40px;
+    margin: -#{$crm-standard-gap} 0 $crm-standard-gap;
+    padding: 0 ($crm-standard-gap * 2);
     position: relative;
     top: 25px;
     width: 100%;
@@ -33,12 +36,12 @@ h2 {
     color: transparent;
     float: left;
     left: 10px;
-    padding: 0 40px;
+    padding: 0 ($crm-standard-gap * 2);
     position: relative;
     top: -5px;
 
     > a {
-      color: #fff;
+      color: $crm-white;
       font-size: 0.8rem;
       left: -10px;
       padding: 0;
