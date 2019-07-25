@@ -1,4 +1,5 @@
 const { dest, series, src, watch } = require('gulp');
+const civicrmScssRoot = require('civicrm-scssroot')();
 
 function sass () {
   const sass = require('gulp-sass');
@@ -6,9 +7,15 @@ function sass () {
 
   return src('./scss/**/*.scss')
     .pipe(sass({
-      outputStyle: 'compressed'
+      outputStyle: 'compressed',
+      includePaths: civicrmScssRoot.getPath(),
     }).on('error', sass.logError))
     .pipe(dest('./css'));
+}
+
+function sassRootSync (cb) {
+  civicrmScssRoot.updateSync();
+  cb();
 }
 
 function sassWatch () {
@@ -17,6 +24,6 @@ function sassWatch () {
 
 Object.assign(exports, {
   'default': sass,
-  'sass': sass,
-  'sass:watch': sassWatch
+  'sass': series(sassRootSync, sass),
+  'sass:watch': series(sassRootSync, sassWatch),
 });
