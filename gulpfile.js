@@ -5,7 +5,9 @@ function sass () {
   sass.compiler = require('node-sass');
 
   return src('./scss/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
     .pipe(dest('./css'));
 }
 
