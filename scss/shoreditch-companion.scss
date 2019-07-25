@@ -1,5 +1,6 @@
 h2 {
-  font-weight: 600 !important; }
+  font-weight: 600 !important;
+}
 
 #branding {
   background: #222831 !important;
@@ -7,8 +8,9 @@ h2 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 20px;
   overflow: visible !important;
-  padding: 20px 0 0; }
-  #branding h1.page-title {
+  padding: 20px 0 0;
+
+  h1.page-title {
     background: #fff;
     box-sizing: border-box;
     color: #464354;
@@ -20,41 +22,58 @@ h2 {
     position: relative;
     top: 25px;
     width: 100%;
-    z-index: 1; }
-  #branding .add-shortcut {
-    display: none; }
-  #branding .breadcrumb {
+    z-index: 1;
+  }
+
+  .add-shortcut {
+    display: none;
+  }
+
+  .breadcrumb {
     color: transparent;
     float: left;
     left: 10px;
     padding: 0 40px;
     position: relative;
-    top: -5px; }
-    #branding .breadcrumb > a {
+    top: -5px;
+
+    > a {
       color: #fff;
       font-size: 0.8rem;
       left: -10px;
       padding: 0;
-      position: relative; }
-      #branding .breadcrumb > a:not(:last-of-type)::after {
+      position: relative;
+
+      &:not(:last-of-type)::after {
         content: '>';
         display: inline-block;
         font-size: 0.6em;
         position: absolute;
-        right: -10px; }
+        right: -10px;
+      }
+    }
+  }
+}
 
 /* #console {
   @extend .alert, .alert-warning;
 
   margin-top: 0 !important;
 } */
+  
 #printer-friendly {
   position: absolute !important;
   right: 0 !important;
   top: -50px !important;
-  z-index: 2; }
-  #printer-friendly a {
-    color: #fff; }
+  z-index: 2;
+
+  a {
+    color: #fff;
+  }
+}
 
 #toolbar {
-  box-shadow: none !important; }
+  box-shadow: none !important;
+}
+
+
