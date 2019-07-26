@@ -1,0 +1,84 @@
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/variables';
+@import 'SCSSROOT/org.civicrm.shoreditch/scss/civicrm/variables';
+
+h1.page-title {
+  background: $crm-white;
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-weight: 600 !important;
+}
+
+#branding {
+  background: $crm-page-topbar-bg !important;
+  color: $crm-white !important;
+  font-family: $font-family-base;
+  line-height: 20px;
+  overflow: visible !important;
+  padding: $crm-standard-gap 0 0;
+
+  h1.page-title {
+    background: $crm-white;
+    box-sizing: border-box;
+    color: $gray-darker;
+    display: block;
+    font-weight: 600 !important;
+    line-height: 50px !important;
+    margin: -#{$crm-standard-gap} 0 $crm-standard-gap;
+    padding: 0 ($crm-standard-gap * 2);
+    position: relative;
+    top: 25px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .add-shortcut {
+    display: none;
+  }
+
+  div.breadcrumb {
+    color: transparent;
+    float: left;
+    left: 10px;
+    padding: 0 ($crm-standard-gap * 2);
+    position: relative;
+    top: -5px;
+
+    > a {
+      color: $crm-white;
+      font-size: 0.8rem;
+      left: -10px;
+      padding: 0;
+      position: relative;
+
+      &:not(:last-of-type)::after {
+        content: '>';
+        display: inline-block;
+        font-size: 0.6em;
+        position: absolute;
+        right: -10px;
+      }
+    }
+  }
+}
+
+.page-civicrm,
+#page {
+  background: $crm-background;
+}
+  
+#printer-friendly {
+  position: absolute !important;
+  right: 0 !important;
+  top: -50px !important;
+  z-index: 2;
+
+  a {
+    color: $crm-white;
+  }
+}
+
+#toolbar {
+  box-shadow: none !important;
+}
