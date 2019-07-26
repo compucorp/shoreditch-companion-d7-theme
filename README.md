@@ -35,4 +35,4 @@ Note that this theme and Shoreditch are designed to theme the CiviCRM administra
     ```
 
 2. Go to _/admin/structure/block/list/shoreditch_companion_d7_theme_
-3. Keep the "Main page content" block in the "Content" region, disabled any other block
+3. Keep the "Main page content" block in the "Content" region, disable any other block
