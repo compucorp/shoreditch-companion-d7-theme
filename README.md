@@ -12,6 +12,10 @@ The main CiviCRM Shoreditch theme (available separately as a CiviCRM extension) 
 
 Note that this theme and Shoreditch are designed to theme the CiviCRM administration pages only and not any public CiviCRM or website pages.
 
+## Requirements
+
+* The Drupal "Seven" theme must be installed and enabled
+
 ## Installation
 
 1. Run the following commands
