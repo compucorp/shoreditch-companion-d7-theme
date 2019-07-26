@@ -32,7 +32,7 @@ Note that this theme and Shoreditch are designed to theme the CiviCRM administra
     # Download ad enable the theme, then set is as the CiviCRM admin theme
     git clone https://github.com/compucorp/shoreditch-companion-d7-theme.git
     drush en -y shoreditch_companion_d7_theme
-    drush vset civicrmtheme_theme_admin seven
+    drush vset civicrmtheme_theme_admin shoreditch_companion_d7_theme
 
     # Clear the civi cache
     drush cc civicrm
