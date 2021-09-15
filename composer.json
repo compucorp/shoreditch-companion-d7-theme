@@ -1,0 +1,17 @@
+{
+    "name": "custom/civicrm_shoreditch_companion",
+    "description": "Companion Drupal theme for the Shoreditch CiviCRM theme.",
+    "type": "drupal-custom-theme",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Compucorp Ltd.",
+            "email": "info@compucorp.co.uk"
+        },
+        {
+            "name": "SYSTOPIA",
+            "email": "info@systopia.de"
+        }
+    ],
+    "homepage": "https://github.com/jensschuppe/civicrm_shoreditch_companion"
+}
