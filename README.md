@@ -1,4 +1,4 @@
-# Shoreditch CiviAdmin Companion Drupal theme
+# Shoreditch CiviCRM Companion Drupal theme
 
 An optional but advisable Drupal CiviCRM Administration theme meant as a
 companion to the CiviCRM
