@@ -1,0 +1,17 @@
+name: Shoreditch CiviAdmin Companion Drupal theme
+type: theme
+description: Companion Drupal theme for the Shoreditch CiviCRM theme.
+package: CiviCRM
+core_version_requirement: ^8 || ^9
+base theme: seven
+libraries:
+  - civicrm_shoreditch_companion/global-styling
+regions:
+  header: Header
+  help: Help
+  content: Content
+  page_top: Page top
+  page_bottom: Page bottom
+  sidebar_first: First sidebar
+regions_hidden:
+  - sidebar_first
