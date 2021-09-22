@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function civicrm_shoreditch_companion_preprocess_html(array &$variables) {
+
+  // Get current route name and (CiviCRM) args parameter.
+  $name = \Drupal::routeMatch()->getRouteName();
+  $args = \Drupal::routeMatch()->getParameter('args');
+
+  // Get module from route name.
+  $segments = explode('.', $name);
+  $module = $segments[0];
+
+  // Is this a CiviCRM route and are arguments given?
+  if (($module == 'civicrm') && $args) {
+
+    // Since the body class of a sub-page inherits the args of its
+    // parent page(s) a prefix is initiated.
+    $prefix = '';
+
+    // Generate classes from arguments.
+    foreach ($args as &$arg) {
+      $page = (empty($prefix) ? $arg : $prefix . '-' . $arg);
+      $class = 'page-' . $page;
+
+      // Add body class to variables.
+      $variables['attributes']['class'][] = $class;
+
+      // Update prefix.
+      $prefix = $page;
+    }
+  }
+}
+
+/**
+ * Implements hook_civicrm_getAssetUrl().
+ */
+function civicrm_shoreditch_companion_civicrm_getAssetUrl(&$asset, &$params) {
+  $theme = \Drupal::service('theme.manager')->getActiveTheme();
+  $name = $theme->getName();
+  if ($name == 'gin') {
+    // CiviCRM toolbar breakpoint fix for Gin theme
+    if ($asset == 'crm-menubar.css') {
+      $params['breakpoint'] = 976;
+    }
+  }
+}
