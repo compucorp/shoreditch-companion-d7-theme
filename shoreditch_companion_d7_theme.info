@@ -1,7 +1,7 @@
 name = Shoreditch CiviAdmin Companion Drupal theme
 description = Companion Drupal 7 theme for the Shoreditch CiviCRM theme
 package = Core
-version = 1.0
+version = "7.x-3.4"
 core = 7.x
 base theme = seven
 stylesheets[screen][] = css/shoreditch-companion.css
